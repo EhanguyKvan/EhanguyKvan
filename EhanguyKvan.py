@@ -134,3 +134,8 @@ def FTJisuanY(a, b):
     x = (a + b)/2
     y = (a - b)/2
     return y
+
+def Qiuhe(a=0, b):
+    #求和用，默认到0
+    x = b(a+b)/2
+    return x
