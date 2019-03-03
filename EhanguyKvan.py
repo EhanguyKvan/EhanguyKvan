@@ -1,58 +1,3 @@
-def chushihuacuowu():
-    #用于处理初始化库错误
-    try:
-        import os  #用于新建文件夹
-    except ImportError:
-        print('请先下载相关库，否则本库则会无法正常运行')
-    
-    mulu = input() + r'\EhanguyKvan'
-    try:
-        os.mkdir(mulu)                            #创建文件夹
-    except FileNotFoundError:
-        print('自定义目录文件夹路径错误，请核对路径输入')
-        chushihuacuowu()
-    except FileExistsError:
-        print('自定义目录文件夹创建错误，请更换路径再次尝试')
-        chushihuacuowu()
-    except OSError:
-        print('自定义目录文件夹路径语法错误，请核对路径语法输入')
-        chushihuacuowu()
-
-def Chushihua():
-    #用于初始化库
-    try:
-        import os  #用于新建文件夹
-    except ImportError:
-        print('请先下载相关库，否则本库则会无法正常运行')
-    
-    global mulu
-    global linshimulu
-    mulu = r'C:\Users\Administrator\AppData\Local\EhanguyKvan'
-    linshimulu = input()
-    if linshimulu != '':
-        mulu = linshimulu + r'\EhanguyKvan'
-        try:
-            os.mkdir(mulu)                            #创建文件夹
-        except FileNotFoundError:
-            print('自定义目录文件夹路径错误，请核对路径输入')
-            chushihuacuowu()
-        except FileExistsError:
-            print('自定义目录文件夹创建错误，请更换路径再次尝试')
-            chushihuacuowu()
-        except OSError:
-            print('自定义目录文件夹路径语法错误，请核对路径语法输入')
-            chushihuacuowu()
-    try:
-        os.mkdir(mulu)                                        #创建文件夹
-    except FileExistsError:
-        print('主目录文件夹创建错误，正在尝试路径切换······')
-        mulu = r'C:\桌面\EhanguyKvan'
-        try:
-            os.mkdir(mulu)                                        #创建文件夹
-        except FileExistsError:
-            print('副目录文件夹创建错误，请检查目录路径或者关闭已打开的本目录')
-            chushihuacuowu()
-
 def PA(numbers):
     #全称为Multiplication algorithm，翻译为算乘法
     #用途为算乘积
@@ -171,3 +116,21 @@ def FJisuan(x, y, fuhao):
         print('你不能输入非实数或其他无效数字')
     except ZeroDivisionError:
         print('你不能除以0！')
+
+def TJisuan(a, b):
+    #用于计算x+y=a;x-y=b类型的算式
+    x = (a + b)/2
+    y = (a - b)/2
+    print('x为' + x + 'y为' + y)
+    
+def FTJisuanX(a, b):
+    #同TJisuan，不过为返回x
+    x = (a + b)/2
+    y = (a - b)/2
+    return x
+    
+def FTJisuanY(a, b):
+    #同TJisuan，不过为返回y
+    x = (a + b)/2
+    y = (a - b)/2
+    return y
