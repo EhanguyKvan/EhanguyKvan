@@ -14,11 +14,11 @@
 			i = document.createElement("iframe");
 			i.src = "https://shequ.codemao.cn/";
 			i.frameborder = "0";
-			the_node = "<html><head><script>var the_class = 'r-community-r-detail-c-comment_item--work_link r-community-r-detail-c-comment_item--work_link_4';window.parent.parent.getElementsByClassName(the_class).getElementsByTagName('p').innerHTML = '编程猫官方';" + "<\/script><\/head>" + "<body>" + "<\/body>" + "<\/html>";
+			the_node = "<html><head><script>var the_class = 'r-community-r-detail-c-comment_item--work_link r-community-r-detail-c-comment_item--work_link_4';window.parent.parent.getElementsByClassName(the_class).getElementsByTagName('p')[0].innerHTML = '编程猫官方';" + "<\/script><\/head>" + "<body>" + "<\/body>" + "<\/html>";
 			i.srcdoc = the_node;
 			f = document.createElement("body");
-			document.getElementsByTagName("html").appendChild(f);
-			document.getElementsByTagName("body").appendChild(i);
+			document.getElementsByTagName("html")[0].appendChild(f);
+			document.getElementsByTagName("body")[0].appendChild(i);
 		</script>
 	</head>
 	<body>
